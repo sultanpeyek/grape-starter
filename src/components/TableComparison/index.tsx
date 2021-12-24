@@ -115,7 +115,7 @@ export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
             sx={{
               order: { xs: 'inherit', lg: key + 2 },
               // Add margin bottom only on Mobile
-              ...(key == values.length - 1 && {
+              ...(key === values.length - 1 && {
                 marginBottom: { xs: '1rem', lg: 0 },
               }),
             }}
@@ -128,7 +128,7 @@ export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
                 marginLeft: { xs: 0, lg: '1rem' },
                 marginRight: { xs: 0, lg: '1rem' },
                 // Add border radius at the bottom
-                ...(key == values.length - 1 && {
+                ...(key === values.length - 1 && {
                   paddingBottom: '1rem',
                   borderBottomLeftRadius: '1rem',
                   borderBottomRightRadius: '1rem',
@@ -138,7 +138,7 @@ export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
               <StyledPaperInner>
                 <Box
                   sx={{
-                    display: { xs: key != 0 ? 'block' : 'none', lg: 'none' }, // Show heading on top of the value only on Mobile
+                    display: { xs: key !== 0 ? 'block' : 'none', lg: 'none' }, // Show heading on top of the value only on Mobile
                     '& *': {
                       fontSize: '0.8rem',
                     },
@@ -182,14 +182,14 @@ export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
             sx={{
               padding: '1rem 0',
               order: { xs: 'inherit', lg: key + 2 },
-              display: { xs: key == 0 ? 'inherit' : 'none', lg: 'flex' },
+              display: { xs: key === 0 ? 'inherit' : 'none', lg: 'flex' },
               justifyContent: 'flex-start',
               alignItems: 'flex-end',
               borderBottom: '1px solid #fff',
-              ...(key == headings.length - 1 && {
+              ...(key === headings.length - 1 && {
                 borderBottom: 'none',
               }),
-              ...(key == 0 && {
+              ...(key === 0 && {
                 borderBottom: 'none',
               }),
             }}
