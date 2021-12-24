@@ -15,8 +15,8 @@ interface TableComparisonProps {
   items: TableComparisonItemProps[];
 }
 
-export const TableComparison = (props: TableComparisonProps) => {
-  const { headings, items } = props;
+export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
+  const { headings, items } = tableComparisonProps;
   const StyledPaperOuter = styled(Paper)({
     background: 'rgba(255, 255, 255, 0.25)',
     padding: '0.5rem 1rem',
@@ -41,8 +41,8 @@ export const TableComparison = (props: TableComparisonProps) => {
     },
   });
 
-  const TableComparisonItem = (props: TableComparisonItemProps) => {
-    const { className, classAlias, minToken, minTokenLP, values } = props;
+  const TableComparisonItem = (tableComparisonItemProps: TableComparisonItemProps) => {
+    const { className, classAlias, minToken, minTokenLP, values } = tableComparisonItemProps;
 
     let backgroundHeader = 'linear-gradient(90deg, #545769 16.21%, #262834 81.73%)';
     if (className === 'B') {
