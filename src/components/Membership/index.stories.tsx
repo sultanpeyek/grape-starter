@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { TableComparison } from './index';
+import { MembershipView } from './index';
 
 // Import them by yourself
 import { Typography } from '@mui/material';
@@ -17,9 +17,9 @@ import ParaglidingIcon from '@mui/icons-material/Paragliding';
 import GroupWorkIcon from '@mui/icons-material/GroupWork';
 
 export default {
-  title: 'Grape/TableComparison',
-  component: TableComparison,
-} as ComponentMeta<typeof TableComparison>;
+  title: 'Grape/Membership',
+  component: MembershipView,
+} as ComponentMeta<typeof MembershipView>;
 
 const data = {
   headings: [
@@ -185,6 +185,6 @@ const data = {
   ],
 };
 
-const Template: ComponentStory<typeof TableComparison> = () => <TableComparison {...data} />;
+const Template: ComponentStory<typeof MembershipView> = () => <MembershipView {...data} />;
 
 export const Default = Template.bind({});

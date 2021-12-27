@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid, Box, Paper, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
-interface TableComparisonItemProps {
+interface MembershipComparisonItemProps {
   className: string;
   classAlias: string;
   minToken: string;
@@ -10,12 +10,12 @@ interface TableComparisonItemProps {
   values: (JSX.Element | string)[];
 }
 
-interface TableComparisonProps {
+interface MembershipProps {
   headings: (JSX.Element | string)[];
-  items: TableComparisonItemProps[];
+  items: MembershipComparisonItemProps[];
 }
 
-export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
+export const MembershipView = (tableComparisonProps: MembershipProps) => {
   const { headings, items } = tableComparisonProps;
   const StyledPaperOuter = styled(Paper)({
     background: 'rgba(255, 255, 255, 0.25)',
@@ -41,7 +41,7 @@ export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
     },
   });
 
-  const TableComparisonItem = (tableComparisonItemProps: TableComparisonItemProps) => {
+  const MembershipComparisonItem = (tableComparisonItemProps: MembershipComparisonItemProps) => {
     const { className, classAlias, minToken, minTokenLP, values } = tableComparisonItemProps;
 
     let backgroundHeader = 'linear-gradient(90deg, #545769 16.21%, #262834 81.73%)';
@@ -201,7 +201,7 @@ export const TableComparison = (tableComparisonProps: TableComparisonProps) => {
         ))}
 
         {items.map((item, key: number) => (
-          <TableComparisonItem key={key} {...item} />
+          <MembershipComparisonItem key={key} {...item} />
         ))}
       </Grid>
     </Container>
